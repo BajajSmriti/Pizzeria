@@ -1,0 +1,40 @@
+<div class="split left text-center">
+  <ul class="list-inline h6">
+    <li *ngFor="let item of cus; let i=index">
+      <div class="out">
+        <div class="in1">
+          <span class="h4">{{item.name}}</span>
+          <br><br>
+          <div *ngIf="item.type=='veg'; then but; else nonveg"></div>
+          <ng-template #but>
+            <img width="20" [src]='"assets/veg.jpg"'>
+          </ng-template>
+          <ng-template #nonveg>
+            <img width="20" [src]='"assets/nonveg.png"'>
+          </ng-template>
+          <br>
+          &#8377;{{item.price}}
+        </div>
+        <div class="in">
+          {{item.description}}
+          <br><br>
+          <b>Ingredients:</b>{{item.ingredients}}
+          <br><br>
+          <b>Toppings:</b>{{item.topping}}
+        </div>
+        <div class="in">
+          <img width="100px" height="80px" [src]="item.image">
+          <br><br>
+          <div *ngIf="show"><a (click)="route(item.id)">Customize Pizza</a></div>
+          <br><br>
+          <div><button (click)="add(item.id,item.name,1,item.price)" id=i class="btn btn-warning add">Add to cart</button></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <footer class="footer text-center text-danger " style="padding-top: 50px;"><em>Copyrights @ 2018 Pizzeria. All Rights
+      Reserved.</em></footer>
+</div>
+<div class="splitr right">
+  <app-shopping-cart (eventChange)='updateCount($event)'></app-shopping-cart>
+</div>

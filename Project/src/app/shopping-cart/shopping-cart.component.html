@@ -1,0 +1,27 @@
+<div *ngIf="total!=0; else disp">
+  <table class="table borderless table-nonfluid" width="400px">
+    <tr>
+      <th>Items</th>
+      <th>Quantity</th>
+      <th>Amount</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let item of cus">
+      <td>#{{item.id}} {{item.items}}</td>
+      <td><button class="btn" (click)="minus(item.id,item.items,item.quantity,item.amount)">-</button>
+        {{item.quantity}} <button class="btn" (click)="plus(item.id,item.items,item.quantity,item.amount)">+</button></td>
+      <td>&#8377;{{item.amount}}</td>
+      <td><button (click)="remove(item.items,item.quantity,item.amount)" class="btn glyphicon glyphicon-remove custom"></button></td>
+    </tr>
+  </table>
+  <div class="pos fixed-bottom">
+    <div id="amt" class="pay text-center dropdown-toggle" data-toggle="dropdown">To Pay: {{total}}</div>
+    <br>
+    <button (click)="switch()" class="btn btn1 btn-success">Checkout</button>
+  </div>
+</div>
+<ng-template #disp>
+  <div class="text-center">
+    There's nothing in the cart! <i class="em em-confounded"></i>
+  </div>
+</ng-template>

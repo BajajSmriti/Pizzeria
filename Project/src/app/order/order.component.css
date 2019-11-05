@@ -1,0 +1,42 @@
+.in{
+    width: 200px;
+    height:150px;
+    float:left;
+}
+.in1{
+    width: 100px;
+    height:150px;
+    float:left;
+}
+.out{
+    width:550px;
+    height:200px;
+    border:1px solid rgb(180, 177, 177); 
+    padding:15px;   
+    border-radius: 25px;
+}
+.split {
+    height: 100%;
+    width: 70%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+  }
+  .splitr {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 70px;
+  }

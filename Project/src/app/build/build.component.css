@@ -1,0 +1,33 @@
+.out{
+    width:300px;
+    height:100px;
+    padding:10px;
+}
+p{
+    padding-top:20px;
+}
+.split {
+    height: 100%;
+    width: 70%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 70px;
+}
+
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+  }
+  .splitr {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 70px;
+  }

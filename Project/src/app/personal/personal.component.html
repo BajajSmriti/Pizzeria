@@ -1,0 +1,25 @@
+<div class="text-center">
+  <div *ngIf="!submitted; else disp">
+    <h1>Your Personal Details</h1>
+    <form [formGroup]="form1" (ngSubmit)="onSubmit(form1.value)">
+      Your name &nbsp; &nbsp;<span [hidden]="!form1.controls.title.dirty || form1.controls.title.valid">*</span>
+      <input type="text" formControlName="title">
+      <br><br>
+      Your address  &nbsp; &nbsp;<span [hidden]="!form1.controls.desc.dirty || form1.controls.desc.valid">*</span>
+      <input type="text" formControlName="desc">
+      <br><br>
+      Your contact no.  &nbsp;  &nbsp;<span [hidden]="!form1.controls.no.dirty || form1.controls.no.valid">*</span>
+      <input type="tel" formControlName="no">
+      <br><br>
+      <button class="btn" (click)="change()" type="submit" [disabled]="!form1.valid">Proceed to Payment</button>
+    </form>
+  </div>
+  <ng-template #disp>
+      <div style="position:fixed; top: 50%; left:45%" *ngIf="show">
+        Choose one:<br>
+          <input type="radio" name="pay" value="Cash">Cash
+          <br>
+          <input type="radio" name="pay" value="PayTm">PayTm
+      </div>
+  </ng-template>
+</div>

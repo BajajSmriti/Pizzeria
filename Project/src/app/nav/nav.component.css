@@ -1,0 +1,25 @@
+nav{
+    height:20px;
+}
+
+  @media (max-width: 800px) {
+  .navbar-nav>li{
+    float:left;
+     /* display: inline-block; */
+     margin-top:-5px;
+  } 
+  .navbar-header{
+    float:left;
+    /* display: inline-block; */
+    margin-left:8px; 
+    margin-right:8px;   
+    margin-top:-12px;  
+  }
+  a{
+    padding:0px;
+  }
+  button{
+      float:right;
+      /* display: inline-block; */
+  }
+  }

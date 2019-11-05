@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <nav class="navbar navbar-fixed-top navbar-inverse" style="padding-right: 20px">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar com navbar-text h3">Pizzeria</span>
+      </div>
+      <div style="display: inline-block;">
+        <ul class="nav navbar-nav">
+          <li><a routerLink="home"><img style="margin-top: -12px" width="60px" [src]='"assets/PizzeriaLogo.png"'></a></li>
+          <li><a routerLink="order">Order Pizza</a></li>
+        </ul>
+      </div>
+        <button (click)="scart()" class="navbar-right navbar-fixed-right btn btn-warning navbar-btn"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+    </div>
+  </nav>
+  <div style="padding:50px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="split left" >
+    <div class="text-center">
+  <p>Pizzeria now gives you options to build your own pizza. Customize your pizza by choosing ingredients from the
+      list given below.</p>
+  <hr>
+  <ul class="list-inline h5">
+      <li *ngFor="let item of cus">
+          <div class="out">
+              <img width="100px" height="80px" [src]="item.image">
+              {{item.tname}} &#8377;{{item.price}}
+              <div class="h5 text-danger"><button class="btn" (click)="func(item.id,item.tname,1,item.price)">Add me!</button></div>
+          </div>
+      </li>
+  </ul>
+  <div *ngIf="cost1!=0"><label>Total Cost: &#8377;{{cost1}}</label></div>
+  <footer class="footer text-center text-danger " style="padding-top: 50px;"><em>Copyrights @ 2018 Pizzeria. All Rights Reserved.</em></footer>
+</div>
+</div>
+<div class="splitr right">
+    <app-shopping-cart (eventChange)='updateCount($event)'></app-shopping-cart>
+</div>

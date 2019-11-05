@@ -1,0 +1,30 @@
+th,td{
+    padding:7px;
+    text-align: center;
+}
+
+.table-nonfluid {
+    width: auto !important;
+ }
+.borderless td, .borderless th {
+    border: none;
+}
+
+.pay{
+    border:1px solid rgb(228, 226, 226);   
+    border-radius: 5px;
+    width:400px;
+}
+.btn1{
+    width:400px;
+}
+
+.pos{
+    position: relative;
+    top: 20px;
+}
+
+.custom{
+    border-radius:90%
+}
+
